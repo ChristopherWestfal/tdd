@@ -2,11 +2,21 @@ package org.example;
 
 public class PlayerCharacter {
 
+    static int x = 0, y = 0;
+
+
     public static int getX(){
-        return 0;
+        return x;
     }
 
     public static int getY(){
-        return 0;
+        return y;
+    }
+
+    public static boolean move(String direction){
+        if(direction.equals("w") || direction.equals("W")){
+            y++;
+        }
+        return true;
     }
 }
