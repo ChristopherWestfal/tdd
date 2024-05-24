@@ -17,6 +17,21 @@ public class PlayerCharacter {
         if(direction.equals("w") || direction.equals("W")){
             y++;
         }
-        return true;
+        if(direction.equals("s") || direction.equals("S")){
+            y--;
+        }
+        if(direction.equals("d") || direction.equals("D")){
+            x++;
+        }
+        if(direction.equals("a") || direction.equals("A")){
+            x--;
+        }
+
+        return y == 1 || y == -1 || x == 1 || x == -1;
+    }
+
+    public static void reset(){
+        y = 0;
+        x = 0;
     }
 }
